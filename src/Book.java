@@ -4,13 +4,13 @@ import java.io.RandomAccessFile;
 public class Book {
 
     // Attributes
-    private String bookTitle; // 112
-    private String bookAuthor; // 40
-    private String bookPublisher; // 40
-    private long numberISBN; // 8
-    private double bookPrice; // 8
-    private int stockQuantity; // 4
-    private final long recordLength = 212;
+    private String bookTitle; // 56 chars 112 bytes
+    private String bookAuthor; // 20 chars 40 bytes
+    private String bookPublisher; // 14 chars 28 bytes
+    private long numberISBN; // 8 bytes
+    private double bookPrice; // 8 bytes
+    private int stockQuantity; // 4 bytes
+    private final long recordLength = 200;
     // End attributes
 
     // Constructor
@@ -83,7 +83,7 @@ public class Book {
     }
     // End getter and setter
 
-    // Method readRecord to read from a random access file
+    // Method readRecord to read record from a random access file
     public void readRecord (RandomAccessFile randomAccessFile, int recordNumber) throws IOException {
 
         // Read String type
@@ -109,7 +109,69 @@ public class Book {
         numberISBN = randomAccessFile.readLong();
         bookPrice = randomAccessFile.readDouble();
         stockQuantity = randomAccessFile.readInt();
-
     }
 
-}
+    // End readRecord method
+
+    // Method writeRecord to write a record into random access file
+    public void writeRecord (RandomAccessFile randomAccessFile, int recordNumber) throws IOException {
+        randomAccessFile.seek(recordNumber * recordLength); // Move pointer to position on file
+
+        // Write bookTitle of the record
+        int bookTitleLength = bookTitle.length(); // Determine if there is over 56 characters (112 bytes)
+        int padLength = 0; // Calculate the length that's need to be
+        if (bookTitleLength > 56) {
+            bookTitleLength = 56;
+        } else {
+            padLength = 56 - bookTitleLength;
+        }
+        for (int i = 0; i < bookTitle.length(); i++) {
+            randomAccessFile.writeChar(bookTitle.charAt(i));
+        }
+        if (padLength > 0) {
+            for (int i = 0; i < padLength; i++) {
+                randomAccessFile.readChar();
+            }
+        }
+
+        // Write bookAuthor of the record
+        int bookAuthorLength = bookAuthor.length();
+        padLength = 0;
+        if (bookAuthorLength > 20) {
+            bookAuthorLength = 20;
+        } else {
+            padLength = 20 - bookAuthorLength;
+        }
+        for (int i = 0; i < bookAuthor.length(); i++) {
+            randomAccessFile.writeChar(bookAuthor.charAt(i));
+        }
+        if (padLength > 0) {
+            for (int i = 0; i < padLength; i++) {
+                randomAccessFile.readChar();
+            }
+        }
+
+        // Write bookPublisher of the record
+        int bookPublisherLength = bookPublisher.length();
+        padLength = 0;
+        if (bookPublisherLength > 14) {
+            bookPublisherLength = 14;
+        } else {
+            padLength = 14 - bookPublisherLength;
+        }
+        for (int i = 0; i < bookPublisher.length(); i++) {
+            randomAccessFile.writeChar(bookPublisher.charAt(i));
+        }
+        if (padLength > 0) {
+            for (int i = 0; i < padLength; i++) {
+                randomAccessFile.readChar();
+            }
+        }
+
+        // Write number type of the record
+        randomAccessFile.writeLong(numberISBN);
+        randomAccessFile.writeDouble(bookPrice);
+        randomAccessFile.writeInt(stockQuantity);
+    } // End writeRecord method
+
+} // End class Book
