@@ -5,12 +5,12 @@ public class Book {
 
     // Attributes
     private String bookTitle; // 56 chars 112 bytes
-    private String bookAuthor; // 20 chars 40 bytes
+    private String bookAuthor; // 15 chars 30 bytes
     private String bookPublisher; // 14 chars 28 bytes
     private long numberISBN; // 8 bytes
     private double bookPrice; // 8 bytes
     private int stockQuantity; // 4 bytes
-    private final long recordLength = 200;
+    private final long recordLength = 190;
     // End attributes
 
     // Constructor
@@ -32,6 +32,8 @@ public class Book {
         bookPrice = 0.00;
         stockQuantity = 0;
     } // End blank constructor
+
+
 
     // Getter and setter
     public String getBookTitle() {
@@ -89,17 +91,17 @@ public class Book {
         // Read String type
         randomAccessFile.seek(recordNumber * recordLength);
         String temp = "";
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 56; i++) {
             temp = temp + randomAccessFile.readChar();
         }
         bookTitle = temp.trim();
         temp = "";
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 15; i++) {
             temp = temp + randomAccessFile.readChar();
         }
         bookAuthor = temp.trim();
         temp = "";
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 14; i++) {
             temp = temp + randomAccessFile.readChar();
         }
         bookPublisher = temp.trim();
@@ -109,16 +111,16 @@ public class Book {
         numberISBN = randomAccessFile.readLong();
         bookPrice = randomAccessFile.readDouble();
         stockQuantity = randomAccessFile.readInt();
-    }
-
-    // End readRecord method
+    } // End readRecord method
 
     // Method writeRecord to write a record into random access file
     public void writeRecord (RandomAccessFile randomAccessFile, int recordNumber) throws IOException {
         randomAccessFile.seek(recordNumber * recordLength); // Move pointer to position on file
 
         // Write bookTitle of the record
-        int bookTitleLength = bookTitle.length(); // Determine if there is over 56 characters (112 bytes)
+
+        // Determine if there is over 56 characters (112 bytes)
+        int bookTitleLength = bookTitle.length();
         int padLength = 0; // Calculate the length that's need to be
         if (bookTitleLength > 56) {
             bookTitleLength = 56;
@@ -130,24 +132,24 @@ public class Book {
         }
         if (padLength > 0) {
             for (int i = 0; i < padLength; i++) {
-                randomAccessFile.readChar();
+                randomAccessFile.writeChar(' ');
             }
         }
 
         // Write bookAuthor of the record
         int bookAuthorLength = bookAuthor.length();
         padLength = 0;
-        if (bookAuthorLength > 20) {
-            bookAuthorLength = 20;
+        if (bookAuthorLength > 15) {
+            bookAuthorLength = 15;
         } else {
-            padLength = 20 - bookAuthorLength;
+            padLength = 15 - bookAuthorLength;
         }
         for (int i = 0; i < bookAuthor.length(); i++) {
             randomAccessFile.writeChar(bookAuthor.charAt(i));
         }
         if (padLength > 0) {
             for (int i = 0; i < padLength; i++) {
-                randomAccessFile.readChar();
+                randomAccessFile.writeChar(' ');
             }
         }
 
@@ -164,7 +166,7 @@ public class Book {
         }
         if (padLength > 0) {
             for (int i = 0; i < padLength; i++) {
-                randomAccessFile.readChar();
+                randomAccessFile.writeChar(' ');
             }
         }
 

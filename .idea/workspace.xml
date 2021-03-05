@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb22176-eb41-48f5-b618-374571c7531e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/BookStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/BookStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/items.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BookStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/items.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +31,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
@@ -35,7 +39,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Solo.bet" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -53,12 +63,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BookStore" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -72,45 +94,28 @@
       <workItem from="1614356996799" duration="9612000" />
       <workItem from="1614443684895" duration="2739000" />
       <workItem from="1614466545229" duration="8680000" />
-      <workItem from="1614529680542" duration="6325000" />
+      <workItem from="1614529680542" duration="8928000" />
+      <workItem from="1614637228039" duration="1616000" />
+      <workItem from="1614641787442" duration="86000" />
+      <workItem from="1614641917489" duration="3332000" />
+      <workItem from="1614705359761" duration="1190000" />
+      <workItem from="1614784627761" duration="4734000" />
+      <workItem from="1614902476780" duration="1283000" />
+      <workItem from="1614967920651" duration="11365000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="184" key="#Project_Structure" timestamp="1614367940738">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="552" y="184" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1614367940738" />
-    <state x="765" y="242" key="#com.intellij.ide.util.MemberChooser" timestamp="1614470589440">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="765" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1614470589440" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1614479897470">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1614479897470" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1614479897470">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1614479897470" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1614479897470">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1614479897470" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1614479897470">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1614479897470" />
-    <state x="549" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1614529783396">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="549" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1614529783396" />
-    <state x="690" y="292" key="extract.method.dialog" timestamp="1614539218372">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="690" y="292" key="extract.method.dialog/0.0.1920.1050@0.0.1920.1050" timestamp="1614539218372" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.EOFException" package="java.io" />
+          <option name="timeStamp" value="7" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
