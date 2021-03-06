@@ -28,8 +28,8 @@ public class BookStore {
     // Print out field within an array of Book
     public static void printOutData (Book printBooks[], int numberRecord) {
         for (int i = 0; i < numberRecord; i++) {
-            System.out.println(printBooks[i].getBookTitle() + "\t" + printBooks[i].getBookAuthor() + "\t"
-                    + printBooks[i].getBookPublisher() + "\t" + printBooks[i].getNumberISBN()
+            System.out.println(printBooks[i].getBookTitle() + "\t" + printBooks[i].getBookAuthor()
+                    + "\t" + printBooks[i].getBookPublisher() + "\t" + printBooks[i].getNumberISBN()
                     + "\t" + printBooks[i].getBookPrice() + "\t" + printBooks[i].getStockQuantity());
         }  // end printOutData
     }
@@ -52,8 +52,8 @@ public class BookStore {
             inBook[i] = new Book();
             inBook[i].readRecord(randomAccessFile, i);
             System.out.println (inBook[i].getBookTitle() + "\t" + inBook[i].getBookAuthor()
-                    + "\t" + inBook[i].getBookPublisher() + "\t" + inBook[i].getNumberISBN() + "\t"
-                    + inBook[i].getBookPrice() + "\t" + inBook[i].getStockQuantity());
+                    + "\t" + inBook[i].getBookPublisher() + "\t" + inBook[i].getNumberISBN()
+                    + "\t" + inBook[i].getBookPrice() + "\t" + inBook[i].getStockQuantity());
         } //end for
         randomAccessFile.close();
         System.out.println("File closed");
