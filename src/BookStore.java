@@ -77,21 +77,21 @@ public class BookStore {
         }
     }
 
-    // Method sortByISBN
-    public static void sortByISBN(Book[] book) {
-        int n = book.length;
+    // Method sortByISBN Selection Sort
+    public static void sortByISBN(Book[] Book) {
+        int n = Book.length;
         // One by one move boundary of unsorted subarray
         for (int i = 0; i < n - 1; i++) {
             // Find the minimum element in unsorted array
-            int minISBN = i;
+            int minIndex = i;
             for (int j = i + 1; j < n; j++)
-                if (book[j].getNumberISBN() < book[minISBN].getNumberISBN())
-                    minISBN = j;
+                if (Book[j].getNumberISBN() < Book[minIndex].getNumberISBN())
+                    minIndex = j;
 
             // Swap the found minimum element with the first element
-            Book temp = book[minISBN];
-            book[minISBN] = book[i];
-            book[i] = temp;
+            Book temp = Book[minIndex];
+            Book[minIndex] = Book[i];
+            Book[i] = temp;
         }
     }
 
@@ -99,7 +99,6 @@ public class BookStore {
         System.out.println(' ');
         int records = 0;
         String txtFileName, binFileName;
-        Scanner s = new Scanner(System.in);
         Book[] books = new Book[12];
 
         // Welcome message
@@ -132,19 +131,19 @@ public class BookStore {
             switch (choice) {
                 case 1:
                     System.out.println("Please enter the ASCII file name you want to read from with extension:");
-                    txtFileName= s.nextLine();
+                    txtFileName = input.nextLine();
                     records = inputData(txtFileName, books);
                     printOutData(books, records);
                     break;
                 case 2:
                     System.out.println("Please enter the Binary file name you want to read from with extension:");
-                    binFileName = s.nextLine();
+                    binFileName = input.nextLine();
                     records = readNewBinFile(binFileName, books);
                     printOutData(books, records);
                     break;
                 case 3:
                     System.out.println("Please enter the Binary file name you want to write to:");
-                    binFileName = s.nextLine();
+                    binFileName = input.nextLine();
                     writeNewBinFile(binFileName, books, records);
                     break;
                 case 4:
@@ -155,13 +154,14 @@ public class BookStore {
                     printReport(books);
                     break;
                 case 6:
+
                     break;
                 case 7:
                     break;
                 case 8:
                     break;
                 case 9:
-                    break;
+
                 case 10:
                     System.out.println("Exiting program...");
                     System.out.println("Program exit!");
