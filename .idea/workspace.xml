@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb22176-eb41-48f5-b618-374571c7531e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/items.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BookStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +20,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1p1iSKbsQLhWBd4fNdBB0B4VKL6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -44,7 +53,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -59,13 +68,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -97,7 +108,8 @@
       <workItem from="1614705359761" duration="1190000" />
       <workItem from="1614784627761" duration="4734000" />
       <workItem from="1614902476780" duration="1283000" />
-      <workItem from="1614967920651" duration="16585000" />
+      <workItem from="1614967920651" duration="17461000" />
+      <workItem from="1615043727862" duration="11099000" />
     </task>
     <servers />
   </component>
