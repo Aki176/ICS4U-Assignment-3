@@ -155,13 +155,13 @@ public class BookStore {
                     printReport(books);
                     break;
                 case 6:
-
+                    break;
                 case 7:
-
+                    break;
                 case 8:
-
+                    break;
                 case 9:
-
+                    break;
                 case 10:
                     System.out.println("Exiting program...");
                     System.out.println("Program exit!");
