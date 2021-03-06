@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb22176-eb41-48f5-b618-374571c7531e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/BookStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/BookStore.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BookStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +44,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -98,7 +97,7 @@
       <workItem from="1614705359761" duration="1190000" />
       <workItem from="1614784627761" duration="4734000" />
       <workItem from="1614902476780" duration="1283000" />
-      <workItem from="1614967920651" duration="15663000" />
+      <workItem from="1614967920651" duration="16585000" />
     </task>
     <servers />
   </component>
