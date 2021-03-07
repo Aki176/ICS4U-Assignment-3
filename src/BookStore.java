@@ -108,6 +108,7 @@ public class BookStore {
                 System.out.println("ISBN: " + Book[i].getNumberISBN());
                 System.out.println("Price: " + Book[i].getBookPrice());
                 System.out.println("Quantity: " + Book[i].getStockQuantity());
+                found = true;
             }
         }
         if (!found) {
