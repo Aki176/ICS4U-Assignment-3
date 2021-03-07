@@ -95,6 +95,47 @@ public class BookStore {
         }
     }
 
+    // Method search by ISBN
+    public static void search(Book[] Book, long numberISBN) {
+        boolean found = false;
+        for (int i = 0; i < Book.length; i++) {
+            if (Book[i].getNumberISBN() == (numberISBN)) {
+                System.out.println("Book found! Here are the details:");
+                System.out.println();
+                System.out.println("Title: " + Book[i].getBookTitle());
+                System.out.println("Author: " + Book[i].getBookAuthor());
+                System.out.println("Publisher: " + Book[i].getBookPublisher());
+                System.out.println("ISBN: " + Book[i].getNumberISBN());
+                System.out.println("Price: " + Book[i].getBookPrice());
+                System.out.println("Quantity: " + Book[i].getStockQuantity());
+            }
+        }
+        if (!found) {
+            System.out.println("Book not found!");
+        }
+    }
+
+    // Override method to search by Author
+    public static void search(Book[] Book, String bookAuthor) {
+        boolean found = false;
+        for (int i = 0; i < Book.length; i++) {
+            if (Book[i].getBookAuthor().equals(bookAuthor)) {
+                System.out.println("Book found! Here are the details:");
+                System.out.println();
+                System.out.println("Title: " + Book[i].getBookTitle());
+                System.out.println("Author: " + Book[i].getBookAuthor());
+                System.out.println("Publisher: " + Book[i].getBookPublisher());
+                System.out.println("ISBN: " + Book[i].getNumberISBN());
+                System.out.println("Price: " + Book[i].getBookPrice());
+                System.out.println("Quantity: " + Book[i].getStockQuantity());
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("Book not found!");
+        }
+    }
+
     public static void main(String[] args) throws IOException {
         System.out.println(' ');
         int records = 0;
@@ -123,6 +164,7 @@ public class BookStore {
 
             // Input choice
             int choice;
+            String ans;
             Scanner input = new Scanner(System.in);
             System.out.println("Please input your menu choice and hit ENTER: ");
             choice = Integer.parseInt(input.nextLine());
@@ -161,7 +203,18 @@ public class BookStore {
                 case 8:
                     break;
                 case 9:
-
+                    System.out.println("Search by ISBN (i) or Search by Author (a)?");
+                    ans = input.nextLine();
+                    if (ans.charAt(0) == 'i') {
+                        System.out.println("Please type the ISBN number in:");
+                        long numberISBN = Long.parseLong(input.nextLine());
+                        search(books, numberISBN);
+                    } else {
+                        System.out.println("Please type the author name in:");
+                        String bookAuthor = input.nextLine();
+                        search(books, bookAuthor);
+                    }
+                    break;
                 case 10:
                     System.out.println("Exiting program...");
                     System.out.println("Program exit!");
@@ -172,22 +225,5 @@ public class BookStore {
                     break;
             }
         }
-
-//        System.out.println("Do you want to write to a binary file? (yes or no)");
-//        ans= s.nextLine();
-//        if (ans.charAt(0)=='y') {
-//            System.out.println("Please enter a Binary file name to write to");
-//            binFileName= s.nextLine();
-//            writeNewBinFile(binFileName, books, records);
-//        }
-//        System.out.println("Do you want to read from a binary file? (yes or no)");
-//        ans= s.nextLine();
-//        if (ans.charAt(0)=='y') {
-//            System.out.println("Please enter a Binary file name to read to");
-//            binFileName= s.nextLine();
-//            records = readNewBinFile(binFileName, books);
-//            printOutData(books, records);
-//        }
-
     }
 }

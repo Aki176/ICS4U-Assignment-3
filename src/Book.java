@@ -1,6 +1,8 @@
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
+@SuppressWarnings("DuplicatedCode")
+
 public class Book {
 
     // Attributes
@@ -32,7 +34,6 @@ public class Book {
         bookPrice = 0.00;
         stockQuantity = 0;
     } // End blank constructor
-
 
 
     // Getter and setter

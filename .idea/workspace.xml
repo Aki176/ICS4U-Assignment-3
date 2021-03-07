@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb22176-eb41-48f5-b618-374571c7531e" name="Default Changelist" comment="Break">
+    <list default="true" id="cdb22176-eb41-48f5-b618-374571c7531e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/BookStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/BookStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BookStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +111,7 @@
       <workItem from="1614784627761" duration="4734000" />
       <workItem from="1614902476780" duration="1283000" />
       <workItem from="1614967920651" duration="17461000" />
-      <workItem from="1615043727862" duration="14827000" />
+      <workItem from="1615043727862" duration="24382000" />
     </task>
     <task id="LOCAL-00001" summary="Break">
       <created>1615062791079</created>
@@ -117,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615062791079</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Done Part B">
+      <created>1615066715287</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615066715287</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,7 +140,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Test" />
     <MESSAGE value="Break" />
-    <option name="LAST_COMMIT_MESSAGE" value="Break" />
+    <MESSAGE value="Done Part B" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done Part B" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
