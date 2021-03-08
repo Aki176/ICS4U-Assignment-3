@@ -151,9 +151,9 @@ public class BookStore {
         Book[Book.length - 1].setBookPrice(bookPrice);
         Book[Book.length - 1].setStockQuantity(stockQuantity);
 
+        // Update RAF
         int padLength = 0;
-
-        randomAccessFile.seek(randomAccessFile.length());
+        randomAccessFile.seek(randomAccessFile.length()); // Move pointer to the final of the file
         padLength = 56 - bookTitle.length();
         for (int i = 0; i < bookTitle.length(); i++) {
             randomAccessFile.writeChar(bookTitle.charAt(i));
@@ -196,6 +196,38 @@ public class BookStore {
         randomAccessFile.writeInt(stockQuantity);
     }
 
+    // Edit book detail by ISBN
+    public static void editBook(String fileName, Book[] Book, long numberISBNSearch, String bookTitle, String bookAuthor, String bookPublisher,
+                                long numberISBN, double bookPrice, int stockQuantity) throws IOException {
+        // Initialize RAF
+        RandomAccessFile randomAccessFile = new RandomAccessFile(fileName, "rw");
+
+        // Edit array book obj
+        boolean found = false;
+        int index;
+        int i;
+        for (i = 0; i < Book.length; i++) {
+            if (Book[i].getNumberISBN() == (numberISBNSearch)) {
+                Book[i].setBookTitle(bookTitle);
+                Book[i].setBookAuthor(bookAuthor);
+                Book[i].setBookPublisher(bookPublisher);
+                Book[i].setNumberISBN(numberISBN);
+                Book[i].setBookPrice(bookPrice);
+                Book[i].setStockQuantity(stockQuantity);
+                found = true;
+                index = i;
+            }
+        }
+        if (!found) {
+            System.out.println("Book not found with that ISBN!");
+        }
+
+        // Update RAF
+        int padLength = 0;
+        randomAccessFile.seek(i * 190);
+        randomAccessFile.seek();
+
+    }
 
     public static void main(String[] args) throws IOException {
         System.out.println(' ');
@@ -275,7 +307,7 @@ public class BookStore {
                     System.out.println("Search by ISBN (i) or Search by Author (a)?");
                     ans = input.nextLine();
                     if (ans.charAt(0) == 'i') {
-                        System.out.println("Please type the ISBN number in:");
+                        System.out.println();
                         long numberISBN = Long.parseLong(input.nextLine());
                         search(books, numberISBN);
                     } else if (ans.charAt(0) == 'a') {
