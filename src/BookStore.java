@@ -37,7 +37,7 @@ public class BookStore {
     // Method to write a binary file from an array of Book
     public static void writeNewBinFile(String fileName, Book[] Book, int numberRecord) throws IOException{
         RandomAccessFile randomAccessFile = new RandomAccessFile(fileName, "rw");
-        for (int i=0; i < numberRecord; i++) {
+        for (int i = 0; i < numberRecord; i++) {
             Book[i].writeRecord(randomAccessFile, i);
         }
         randomAccessFile.close();
@@ -100,8 +100,8 @@ public class BookStore {
         boolean found = false;
         for (int i = 0; i < Book.length; i++) {
             if (Book[i].getNumberISBN() == (numberISBN)) {
-                System.out.println("Book found! Here are the details:");
                 System.out.println();
+                System.out.println("Book found! Here are the details:");
                 System.out.println("Title: " + Book[i].getBookTitle());
                 System.out.println("Author: " + Book[i].getBookAuthor());
                 System.out.println("Publisher: " + Book[i].getBookPublisher());
@@ -116,13 +116,13 @@ public class BookStore {
         }
     }
 
-    // Override method to search by Author
+    // Overload method to search by Author
     public static void search(Book[] Book, String bookAuthor) {
         boolean found = false;
         for (int i = 0; i < Book.length; i++) {
             if (Book[i].getBookAuthor().equals(bookAuthor)) {
-                System.out.println("Book found! Here are the details:");
                 System.out.println();
+                System.out.println("Book found! Here are the details:");
                 System.out.println("Title: " + Book[i].getBookTitle());
                 System.out.println("Author: " + Book[i].getBookAuthor());
                 System.out.println("Publisher: " + Book[i].getBookPublisher());
@@ -136,6 +136,66 @@ public class BookStore {
             System.out.println("Book not found!");
         }
     }
+
+    public static void addBook(String fileName, Book[] Book,
+                               String bookTitle, String bookAuthor, String bookPublisher, long numberISBN, double bookPrice, int stockQuantity) throws IOException {
+        // Initialize RAF
+        RandomAccessFile randomAccessFile = new RandomAccessFile(fileName, "rw");
+
+        // Update array Book
+        Book[Book.length - 1] = new Book(); // Assign to last element
+        Book[Book.length - 1].setBookTitle(bookTitle);
+        Book[Book.length - 1].setBookAuthor(bookAuthor);
+        Book[Book.length - 1].setBookPublisher(bookPublisher);
+        Book[Book.length - 1].setNumberISBN(numberISBN);
+        Book[Book.length - 1].setBookPrice(bookPrice);
+        Book[Book.length - 1].setStockQuantity(stockQuantity);
+
+        int padLength = 0;
+
+        randomAccessFile.seek(randomAccessFile.length());
+        padLength = 56 - bookTitle.length();
+        for (int i = 0; i < bookTitle.length(); i++) {
+            randomAccessFile.writeChar(bookTitle.charAt(i));
+        }
+        if (padLength > 0) {
+            for (int i = 0; i < padLength; i++) {
+                randomAccessFile.writeChar(' ');
+            }
+        }
+
+        padLength = 0;
+        randomAccessFile.seek(randomAccessFile.length());
+        padLength = 15 - bookAuthor.length();
+        for (int i = 0; i < bookAuthor.length(); i++) {
+            randomAccessFile.writeChar(bookAuthor.charAt(i));
+        }
+        if (padLength > 0) {
+            for (int i = 0; i < padLength; i++) {
+                randomAccessFile.writeChar(' ');
+            }
+        }
+
+        padLength = 0;
+        randomAccessFile.seek(randomAccessFile.length());
+        padLength = 14 - bookPublisher.length();
+        for (int i = 0; i < bookPublisher.length(); i++) {
+            randomAccessFile.writeChar(bookPublisher.charAt(i));
+        }
+        if (padLength > 0) {
+            for (int i = 0; i < padLength; i++) {
+                randomAccessFile.writeChar(' ');
+            }
+        }
+
+        randomAccessFile.seek(randomAccessFile.length());
+        randomAccessFile.writeLong(numberISBN);
+        randomAccessFile.seek(randomAccessFile.length());
+        randomAccessFile.writeDouble(bookPrice);
+        randomAccessFile.seek(randomAccessFile.length());
+        randomAccessFile.writeInt(stockQuantity);
+    }
+
 
     public static void main(String[] args) throws IOException {
         System.out.println(' ');
@@ -182,7 +242,6 @@ public class BookStore {
                     System.out.println("Please enter the Binary file name you want to read from with extension:");
                     binFileName = input.nextLine();
                     records = readNewBinFile(binFileName, books);
-                    printOutData(books, records);
                     break;
                 case 3:
                     System.out.println("Please enter the Binary file name you want to write to:");
@@ -197,7 +256,16 @@ public class BookStore {
                     printReport(books);
                     break;
                 case 6:
-
+                    System.out.println("What is the RAF file you are trying to update?");
+                    binFileName = input.nextLine();
+                    System.out.println("Please input");
+                    String bookTitleAdd = input.nextLine();
+                    String bookAuthorAdd = input.nextLine();
+                    String bookPublisherAdd = input.nextLine();
+                    long numberISBNAdd = Long.parseLong(input.nextLine());
+                    double bookPriceAdd = Double.parseDouble(input.nextLine());
+                    int stockQuantityAdd = Integer.parseInt(input.nextLine());
+                    addBook(binFileName, books, bookTitleAdd, bookAuthorAdd, bookPublisherAdd, numberISBNAdd, bookPriceAdd, stockQuantityAdd);
                     break;
                 case 7:
                     break;
@@ -210,16 +278,21 @@ public class BookStore {
                         System.out.println("Please type the ISBN number in:");
                         long numberISBN = Long.parseLong(input.nextLine());
                         search(books, numberISBN);
-                    } else {
+                    } else if (ans.charAt(0) == 'a') {
                         System.out.println("Please type the author name in:");
                         String bookAuthor = input.nextLine();
                         search(books, bookAuthor);
+                    } else {
+                        System.out.println("No chosen method!");
                     }
                     break;
                 case 10:
                     System.out.println("Exiting program...");
                     System.out.println("Program exit!");
                     System.exit(0);
+                    break;
+                case 11:
+                    printOutData(books, records);
                     break;
                 default:
                     System.out.println("Your selection is not available! Please choose again.");

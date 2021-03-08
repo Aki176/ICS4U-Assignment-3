@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb22176-eb41-48f5-b618-374571c7531e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/items.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/items.ics4u" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/items.txt" beforeDir="false" afterPath="$PROJECT_DIR$/items.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/Book.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/BookStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ICS4U-Assignment-3/BookStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BookStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,15 +72,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,7 +111,8 @@
       <workItem from="1614784627761" duration="4734000" />
       <workItem from="1614902476780" duration="1283000" />
       <workItem from="1614967920651" duration="17461000" />
-      <workItem from="1615043727862" duration="24382000" />
+      <workItem from="1615043727862" duration="27695000" />
+      <workItem from="1615136060280" duration="17618000" />
     </task>
     <task id="LOCAL-00001" summary="Break">
       <created>1615062791079</created>
@@ -127,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615066715287</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Search function">
+      <created>1615079663244</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615079663244</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Search function">
+      <created>1615079712903</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615079712903</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,7 +156,8 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Break" />
     <MESSAGE value="Done Part B" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done Part B" />
+    <MESSAGE value="Search function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search function" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -153,7 +169,16 @@
           <properties class="java.io.EOFException" package="java.io" />
           <option name="timeStamp" value="7" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="12" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.io.RandomAccessFile" memberName="path" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
