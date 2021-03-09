@@ -1,7 +1,11 @@
+/*
+ * Author: Duc Anh Vu - Aki176
+ * Last Modified: March 8, 2021
+ * Description: Book database management
+ */
+
 import java.io.IOException;
 import java.io.RandomAccessFile;
-
-@SuppressWarnings("DuplicatedCode")
 
 public class Book {
 
@@ -86,8 +90,19 @@ public class Book {
     }
     // End getter and setter
 
-    // Method readRecord to read record from a random access file
-    public void readRecord (RandomAccessFile randomAccessFile, int recordNumber) throws IOException {
+    /**
+     * Method Name: readRecord
+     * Author: Kyle McKay
+     * Creation Date: ?
+     * Modified Date: ?
+     * Description: Read record from random access file
+     * Parameters: Random Access File, Number of Record
+     * Return Value: N/A
+     * Data Type: Void
+     * Dependencies: java.io.RandomAccessFile
+     * Throws/Exceptions: IOException
+     */
+    public void readRecord(RandomAccessFile randomAccessFile, int recordNumber) throws IOException {
 
         // Read String type
         randomAccessFile.seek(recordNumber * recordLength);
@@ -114,8 +129,19 @@ public class Book {
         stockQuantity = randomAccessFile.readInt();
     } // End readRecord method
 
-    // Method writeRecord to write a record into random access file
-    public void writeRecord (RandomAccessFile randomAccessFile, int recordNumber) throws IOException {
+    /**
+     * Method Name: writeRecord
+     * Author: Kyle McKay
+     * Creation Date: ?
+     * Modified Date: ?
+     * Description: Write record from random access file
+     * Parameters: Random Access File, Number of Record
+     * Return Value: N/A
+     * Data Type: Void
+     * Dependencies: java.io.RandomAccessFile
+     * Throws/Exceptions: IOException
+     */
+    public void writeRecord(RandomAccessFile randomAccessFile, int recordNumber) throws IOException {
         randomAccessFile.seek(recordNumber * recordLength); // Move pointer to position on file
 
         // Write bookTitle of the record
